@@ -1,0 +1,1423 @@
+{
+	"info": {
+		"_postman_id": "48bf1e95-4be6-459c-9f47-ac1fad1e473c",
+		"name": "CSC309 Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24119799"
+	},
+	"item": [
+		{
+			"name": "Accouts-Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "vimdu",
+							"type": "text"
+						},
+						{
+							"key": "password1",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "password2",
+							"value": "123456",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "p.du@mail.utoronto.ca",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "Peng",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Du",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/Accounts/register/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Accounts",
+						"register",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts-UpdateProfile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "darcywang",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123654",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "abcde@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "first_name",
+							"value": "Darcy",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Wang",
+							"type": "text"
+						},
+						{
+							"key": "avatar",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/updateprofile/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"updateprofile",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts-GetProfile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/getprofile/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"getprofile",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts-AddCard",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "card_num",
+							"value": "11166324242323",
+							"type": "text"
+						},
+						{
+							"key": "expiry_date",
+							"value": "2024-01-01",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/Accounts/addcard/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Accounts",
+						"addcard",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts-UpdatePayment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "card_num",
+							"value": "11166324242323",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/Accounts/updatepayment/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Accounts",
+						"updatepayment",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts-CreatePayment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "amount",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "card_num",
+							"value": "11166324242323",
+							"type": "text"
+						},
+						{
+							"key": "time",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "user_id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/Accounts/createpayment/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Accounts",
+						"createpayment",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts-ManageUserSubscription-GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/Accounts/manageusersubscription/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Accounts",
+						"manageusersubscription",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts-EditUserSubscription",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "user_sub_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "start_time",
+							"value": "2022-01-01",
+							"type": "text"
+						},
+						{
+							"key": "end_time",
+							"value": "2022-05-01",
+							"type": "text"
+						},
+						{
+							"key": "auto_renew",
+							"value": "True",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/Accounts/editusersubscription/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Accounts",
+						"editusersubscription",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts-ManageSubscription-GET",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/Accounts/managesubscription/?studio_id=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Accounts",
+						"managesubscription",
+						""
+					],
+					"query": [
+						{
+							"key": "studio_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts-EditSubscription",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sub_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "Monthly",
+							"type": "text"
+						},
+						{
+							"key": "rate",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/Accounts/editsubscription/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Accounts",
+						"editsubscription",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts-DeleteSubscription",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "sub_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/Accounts/deletesubscription/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Accounts",
+						"deletesubscription",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts-PaymentHistory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/Accounts/paymenthistory/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Accounts",
+						"paymenthistory",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts-get-token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "vimdu",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/Accounts/api/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Accounts",
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts-ManageSubscription-POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "studio_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "Monthly",
+							"type": "text"
+						},
+						{
+							"key": "rate",
+							"value": "111",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/Accounts/managesubscription/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Accounts",
+						"managesubscription",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts-ManageUserSubscription-POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "start_time",
+							"value": "2022-11-12",
+							"type": "text"
+						},
+						{
+							"key": "end_time",
+							"value": "2022-12-12",
+							"type": "text"
+						},
+						{
+							"key": "plan_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "auto_renew",
+							"value": "True",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/Accounts/managesubscription/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Accounts",
+						"managesubscription",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Studios-search_class_by_coach",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/Studios/search/class/bycoach?coach=1223",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Studios",
+						"search",
+						"class",
+						"bycoach"
+					],
+					"query": [
+						{
+							"key": "coach",
+							"value": "1223"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Studios-search_class_by_date",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4ODM5MzE3LCJpYXQiOjE2Njg4MzkwMTcsImp0aSI6IjRlMjU5ODk2ZjUyNzRhOTY5NWNjMTYxMmZjYjk0ZThkIiwidXNlcl9pZCI6MX0.T4QeOKk3piP0XkKoFFPVvxyKTYmRyRA93ylhWcc_-jg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/Studios/search/class/bydate?time=2002-09-24",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Studios",
+						"search",
+						"class",
+						"bydate"
+					],
+					"query": [
+						{
+							"key": "time",
+							"value": "2002-09-24"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Studios-search_class_by_name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/Studios/search/class/byname?name='emma'",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Studios",
+						"search",
+						"class",
+						"byname"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "'emma'"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Studios-search_class_by_daterange",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4ODM5MzE3LCJpYXQiOjE2Njg4MzkwMTcsImp0aSI6IjRlMjU5ODk2ZjUyNzRhOTY5NWNjMTYxMmZjYjk0ZThkIiwidXNlcl9pZCI6MX0.T4QeOKk3piP0XkKoFFPVvxyKTYmRyRA93ylhWcc_-jg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/Studios/search/class/bydaterange?time1=2002-09-24&time2=2022-09-28",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Studios",
+						"search",
+						"class",
+						"bydaterange"
+					],
+					"query": [
+						{
+							"key": "time1",
+							"value": "2002-09-24"
+						},
+						{
+							"key": "time2",
+							"value": "2022-09-28"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Studios-search_studio_by_amentities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/Studios/search/studio/byamentities?amentities='aaaa'",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Studios",
+						"search",
+						"studio",
+						"byamentities"
+					],
+					"query": [
+						{
+							"key": "amentities",
+							"value": "'aaaa'"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Studios-search_class_by_coach",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/Studios/search/class/bycoach?coach=1223",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Studios",
+						"search",
+						"class",
+						"bycoach"
+					],
+					"query": [
+						{
+							"key": "coach",
+							"value": "1223"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Studios-search_studio_by_name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/Studios/search/studio/name?name='emma'",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Studios",
+						"search",
+						"studio",
+						"name"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "'emma'"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_studio",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4ODU0MTA5LCJpYXQiOjE2Njg4NTM4MDksImp0aSI6ImExOGM3NmExMWEwMDQ3ZGRiZjQxMzdjNWI1ZTFkYThmIiwidXNlcl9pZCI6MX0.AniRfvtfslN6xsAsRDcqbiFJ0zy19zlKd_eB5hqCuZc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "bbb",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "latitude",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "longitude",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "postal_code",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "phone_number",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/Studios//",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Studios",
+						"",
+						""
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "1.1",
+							"disabled": true
+						},
+						{
+							"key": "longitude",
+							"value": "1.2",
+							"disabled": true
+						},
+						{
+							"key": "index",
+							"value": "0",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Studios-search_studio_by_class",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/Studios/search/studio/byclass?class='emma'",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Studios",
+						"search",
+						"studio",
+						"byclass"
+					],
+					"query": [
+						{
+							"key": "class",
+							"value": "'emma'"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_class",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4ODU1MDQyLCJpYXQiOjE2Njg4NTQ3NDIsImp0aSI6ImQ1NDMwYzZjZjNjNzRlOTNiMWZiOTU0MWE0ZGE4Y2FmIiwidXNlcl9pZCI6MX0.JrEj8ejkOFa57jogrs4YpXzsYOsY1D7tMjF1MrX6E0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "coach",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/Studios/1/classes/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Studios",
+						"1",
+						"classes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_classes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/Studios/1/classes/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Studios",
+						"1",
+						"classes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleat_class_on_date",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4ODU0ODYzLCJpYXQiOjE2Njg4NTQ1NjMsImp0aSI6ImE4ODYxZDA3NjFlNjRhZTVhMzQwOTg5MGU3ZjQyYTlkIiwidXNlcl9pZCI6MX0.JEnAnT1YmQwoe0IPjxDG5qmmwojmvfG_mYc9xlug6Qw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "class_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2022-11-26",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/Studios/classes/deleat_class/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Studios",
+						"classes",
+						"deleat_class",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleat_class_all",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4ODU1MDQyLCJpYXQiOjE2Njg4NTQ3NDIsImp0aSI6ImQ1NDMwYzZjZjNjNzRlOTNiMWZiOTU0MWE0ZGE4Y2FmIiwidXNlcl9pZCI6MX0.JrEj8ejkOFa57jogrs4YpXzsYOsY1D7tMjF1MrX6E0Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "class_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/Studios/classes/deleat_class/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Studios",
+						"classes",
+						"deleat_class",
+						""
+					],
+					"query": [
+						{
+							"key": "class_id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_amenities",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4ODU1Mjg4LCJpYXQiOjE2Njg4NTQ5ODgsImp0aSI6ImQwMjkzZjczYTM4NjRmOTNhMjIzZmI1Y2RmNzcyNTE1IiwidXNlcl9pZCI6MX0.iOgFrWGldmgUtVtfq-fDXfHfZrGVPhRMFf-2Fub71Ms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "amount",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "a",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "xDFYx3FVY/Kanizsa-triangle-tiny.png",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/Studios/1/amenities/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Studios",
+						"1",
+						"amenities",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_amenities",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4ODU1Mjg4LCJpYXQiOjE2Njg4NTQ5ODgsImp0aSI6ImQwMjkzZjczYTM4NjRmOTNhMjIzZmI1Y2RmNzcyNTE1IiwidXNlcl9pZCI6MX0.iOgFrWGldmgUtVtfq-fDXfHfZrGVPhRMFf-2Fub71Ms",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/Studios/1/amenities/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Studios",
+						"1",
+						"amenities",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_studio_detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4ODU1Njg5LCJpYXQiOjE2Njg4NTUzODksImp0aSI6IjY1ODBkODUyODM5MTRiNDM4Mzk3MmZmZjVlM2IxM2MyIiwidXNlcl9pZCI6MX0.gTZp35xnhwtWAvV1HZOuxJwDFHd59XD-ijpoOfvVcVk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone_number",
+							"value": "1234567890",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/Studios/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Studios",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_studio_detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/Studios/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Studios",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "enroll_class",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4ODU2MTI5LCJpYXQiOjE2Njg4NTU4MjksImp0aSI6ImViZDRlNDA1ZDFmMDQ1N2M5ZWFkMjlkNTM2MmQ0NDI1IiwidXNlcl9pZCI6MX0._sK6oQfI6MnQljN9qHD4KAiojj5nYcHVYbwFC9c3z24",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/Studios/classes/2/2022-11-26/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Studios",
+						"classes",
+						"2",
+						"2022-11-26",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "drop_class",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/Studios/classes/2/all/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Studios",
+						"classes",
+						"2",
+						"all",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_studio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/Studios//?latitude=1.1&longitude=1.2&index=0",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"Studios",
+						"",
+						""
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "1.1"
+						},
+						{
+							"key": "longitude",
+							"value": "1.2"
+						},
+						{
+							"key": "index",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
